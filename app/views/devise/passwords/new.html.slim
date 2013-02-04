@@ -1,0 +1,14 @@
+h2= t "devise.instructions.forgot_your_password"
+
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+  = devise_error_messages!
+
+  div
+    = f.label :email
+    br
+    = f.email_field :email
+
+  .form-actions
+    = f.submit t("devise.instructions.send_me_reset_password_instructions"), :class => 'btn btn-primary'
+
+= render "devise/shared/links"

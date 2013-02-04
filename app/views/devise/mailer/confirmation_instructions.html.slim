@@ -1,0 +1,5 @@
+p #{t "devise.instructions.welcome"} #{@resource.email} !
+
+= t 'devise.instructions.confirm_link_below'
+
+= link_to t('devise.instructions.confirm_my_account'), confirmation_url(@resource, :confirmation_token => @resource.confirmation_token)

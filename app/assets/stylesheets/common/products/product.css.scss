@@ -1,0 +1,36 @@
+.product-main {
+  .well {
+    min-height: 261px;
+    h2.capton, del {
+      color: #949599;
+    }
+    h2.price {
+      color: #F15C22;
+    }
+  }
+}
+
+#productCarousel {
+  .carousel-inner {
+    .item {
+      min-height: 300px;
+    }
+  }
+}
+
+.info-block {
+  position: relative;
+  #shop-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 18px;
+  }
+}
+
+.product {
+  h4 {
+    a {
+      text-decoration: none;
+    }
+  }
+}

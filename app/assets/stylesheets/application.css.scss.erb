@@ -1,0 +1,78 @@
+/*
+ *= require_self
+ *= require_tree ./common
+ */
+
+$baseFontSize: 14px;
+$baseLineHeight: 23.8px;
+@import "bootstrap";
+@import "font-awesome/css/font-awesome.css";
+@import "compass/css3";
+
+body {
+  padding-top: 20px;
+  background-image: url(<%= asset_path("striped_lens.png") %>);
+}
+
+.navbar {
+  .navbar-inner {
+    background-image: url(<%= asset_path("wood_pattern.png") %>);
+    @include border-radius(5px, 5px);
+    .container {
+      a.brand {
+        color: #AA140D;
+      }
+      li {
+        a {
+          color: #A97430;
+          &:hover {
+            color: #CF9847;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar .nav li.dropdown .dropdown-toggle .caret, .navbar .nav li.dropdown.open .caret {
+  border-top-color: black;
+  border-bottom-color: black;
+}
+
+#main-nav { padding-top: 20px; }
+
+footer {
+  border-top: 1px solid #CCC;
+  background-color: #F5F5F5;
+}
+
+form.form-search {
+  position: relative;
+  .icon-search {
+    position: absolute;
+    top: 4px;
+    left: 11px;
+  }
+  input#search {
+    padding: 2px;
+    padding-left: 27px;
+  }
+}
+
+.article-content {
+  background: white;
+  border-color: #E5E5E5 #DBDBDB #D2D2D2;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+  padding-bottom: 5px;
+}
+
+.rounded-top {
+  border-radius: 4px 4px 0 0;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius: 4px 4px 0 0;
+  -o-border-radius: 4px 4px 0 0;
+  -khtml-border-radius: 4px 4px 0 0;
+}

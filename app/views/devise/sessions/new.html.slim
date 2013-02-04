@@ -1,0 +1,18 @@
+.span12
+  h2= t "devise.instructions.sign_in"
+
+  = simple_form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => { :class => 'form-horizontal' }) do |f|
+    div
+      = f.input :email
+    div
+      = f.input :password, :label => t('devise.instructions.password')
+
+    -if devise_mapping.rememberable?
+      div
+        = f.input :remember_me, :as => :boolean, :label => I18n.t('devise.instructions.remember_me')
+    .form-actions
+      = f.submit t("devise.instructions.sign_in"), :class => 'btn btn-primary'
+      '
+      = link_to "使用 Facebook 登入", user_omniauth_authorize_path(:facebook), :class => 'btn btn-primary'
+
+  = render "devise/shared/links"

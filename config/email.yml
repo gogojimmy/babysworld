@@ -1,0 +1,40 @@
+development:
+  reply: "no-reply@babysworld.tw"
+  host: "babysworld.tw"
+  subject: "[Example] "
+  smtp:
+    address: "smtp.gmail.com"
+    port: 587
+    domain: "gmail.com"
+    authentication: "plain"
+    user_name: "jimmy@babysworld.tw"
+    password: "0975519929"
+    enable_starttls_auto: true
+staging:
+  reply: "no-reply@babysworld.tw"
+  host: "babysworld.tw"
+  subject: "[Babysworld] "
+  smtp:
+    address: "smtp.gmail.com"
+    port: 587
+    domain: "gmail.com"
+    authentication: "plain"
+    user_name: "contact@babysworld.tw"
+    password: "0975519929"
+    enable_starttls_auto: true
+test:
+  reply: "no-reply@example.com"
+  host: "example.com"
+  subject: "[Example] "
+production:
+  reply: "contact@babysworld.tw"
+  host: "babysworld.tw"
+  subject: "[Babysworld] "
+  smtp:
+    address: "smtp.gmail.com"
+    port: 587
+    domain: "gmail.com"
+    authentication: "plain"
+    user_name: "contact@example.com"
+    password: "hq0329"
+    enable_starttls_auto: true

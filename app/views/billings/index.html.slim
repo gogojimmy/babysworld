@@ -1,0 +1,28 @@
+.span5.pull-right
+  h2.title 目前可請款金額：
+  h2.value #{currency_format current_user.money_can_apply}
+  - if current_user.can_apply?
+    = link_to '請款', user_billings_path(current_user), method: :post, remote: true, id: 'billing_btn', class: 'btn btn-success', data: { loading_text: '處理中..' }
+.span12
+  #billing_alert
+    - if current_user.applying?
+      .alert.alert-success
+        h5 已接到您的請款申請，請耐心等候我們會儘快為您處理
+.span12
+  .billings.article-content.rounded
+    .row-fluid
+      table.table.table-bordered.table-hover.table-condensed
+        thead
+          tr
+            th 請款日期
+            th 匯款時間
+            th 處理狀態
+        tbody
+          - @billings.each do |billing|
+            tr
+              td= l billing.created_at, format: :long
+              td= l billing.updated_at, format: :long if billing.done?
+              td= billing.done? ? "請款成功" : "處理中"
+    .row-fluid
+      = will_paginate @billings
+

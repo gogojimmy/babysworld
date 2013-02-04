@@ -1,0 +1,30 @@
+.row-fluid
+  .span12
+    .well
+      .navbar.navbar-heading
+        .navbar-inner
+          .container
+            a.brand href="#" 廣告列表
+      #banners_wrapper
+        table.table.table-striped.table-bordered.table-condensed
+          thead
+            tr
+              th ID
+              th 縮圖
+              th 開始時間
+              th 結束時間
+              th 連結網址
+              th 操作
+          tbody
+            - @banners.each do |banner|
+              tr
+                td= banner.id
+                td= image_tag(banner.banner.url(:thumb))
+                td= l banner.start_date, format: :short
+                td= l banner.end_date, format: :short
+                td= link_to banner.url, banner.url
+                td
+                  = link_to edit_admin_banner_path(banner), :class => 'btn' do
+                    = content_tag(:i, '', :class => 'icon icon-edit')
+                    '  編輯
+      = will_paginate @banners

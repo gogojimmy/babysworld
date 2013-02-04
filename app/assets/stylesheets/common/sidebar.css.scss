@@ -1,0 +1,39 @@
+@import "compass/css3/box-shadow";
+
+.sidebar {
+  h4 {
+    height: 20px;
+    margin: 0;
+    padding: 14px 10px 6px 10px;
+    border: 1px solid #B3B3B3;
+    border-bottom: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    @include single-box-shadow(#CCC, 0px, -3px, 10px);
+    a {
+      color: #555;
+    }
+  }
+  ul {
+    list-style: disc;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #B3B3B3;
+    box-shadow: 0px 3px 10px #CCC;
+    margin-bottom: 20px;
+    li {
+      list-style-type: none;
+      padding: 10px;
+      background-color: #eeeeee;
+      font-size: 14px;
+      font-weight: bold;
+      a {
+        color: #666;
+      }
+    }
+    li.bg_white {
+      background-color: white;
+    }
+  }
+}

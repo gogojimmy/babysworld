@@ -1,0 +1,4 @@
+= simple_form_for([:admin, @billing], html: { class: 'form-horizontal' }) do |f|
+  = f.input :done, label: '是否處理完成'
+  .form-actions
+    = f.submit '送出', class: 'btn btn-primary'

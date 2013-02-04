@@ -1,0 +1,47 @@
+doctype html
+html lang="zh_TW"
+  head
+    = stylesheet_link_tag    "application"
+    = display_meta_tags site: '寶寶世界二手屋'
+    = csrf_meta_tags
+    link href="/assets/font-awesome/css/font-awesome.css" rel="stylesheet"
+    link rel="shortcut icon" href="/favicon.ico"
+    meta name="viewport" content="width=device-width" initial-scale="1.0"
+    meta charset="UTF-8"
+  body
+    .container
+      .row
+        .span3
+          = link_to image_tag(asset_path('logo-web.png')), '/'
+        .span9
+          nav#main-nav.navbar
+            .navbar-inner
+              .container
+                .nav-collapse
+                  ul.nav
+                    li
+                      a href="/about" 關於寶寶世界二手屋
+                ul.nav.pull-right
+                  = render :partial => "shared/user_status_panel"
+      article.row
+        - if flash.count != 0
+          .span12
+            - flash.each do |name, msg|
+              div{class="alert alert-#{name == :notice ? "success" : "error"} fade in"}
+                a.close data-dismiss="alert" &times;
+                = simple_format(msg)
+        = yield
+    hr
+    footer.footer
+      .container
+        p
+          | © 2012
+          a href="http://www.babyworld.tw"  babysworld.tw
+          |  All Rights Reserved.
+        p
+          = link_to "使用條款", "/terms"
+          '
+          ' |
+          '
+          = link_to "託售須知", "/user_consignment"
+    = javascript_include_tag "application"

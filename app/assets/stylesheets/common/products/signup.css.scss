@@ -1,0 +1,10 @@
+@import "compass/css3/border-radius";
+
+.terms {
+  max-height: 400px;
+  overflow-y: auto;
+  border: black 2px solid;
+  background: white;
+  padding: 15px;
+  @include border-radius(4px, 4px);
+}

@@ -1,0 +1,18 @@
+= simple_form_for @consignment, html: { class: 'form-horizontal' } do |f|
+  #consignment_names
+    = f.simple_fields_for :consignment_products, :wrapper => 'bootstrap' do |product|
+      = render 'consignment_product_fields', f: product
+    .controls
+      = link_to_add_association '增加一筆商品', f, :consignment_products, class: 'btn btn-success btn-mini add-consignment-name', render_options: { wrapper: 'bootstrap' }
+  hr
+  .well
+    = f.input :chinese_name, label: '託售人', hint: '請輸入中文姓名', input_html: { class: 'span6', value: current_user.chinese_name }
+    = f.input :address, label: '聯絡地址', input_html: { class: 'span6', value: current_user.address }
+    = f.input :phone, label: '聯絡電話', input_html: { class: 'span6', value: current_user.phone }
+    = f.input :bank, label: '銀行'
+    = f.input :bank_num, label: '銀行代號', input_html: { class: 'span6', value: current_user.bank_num }
+    = f.input :account, label: '戶名', input_html: { class: 'span6', value: current_user.account }
+    = f.input :account_num, label: '帳號', input_html: { class: 'span6', value: current_user.account_num }
+  .form-actions
+    = f.submit '送出', class: 'btn btn-primary'
+    = link_to '託售須知', '/user_consignment', class: 'user_consignment'

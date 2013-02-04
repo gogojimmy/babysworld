@@ -1,0 +1,18 @@
+.consignments.span12
+  .row-fluid
+    table.table.table-striped.table-bordered.table-hover.table-condensed
+      thead
+        tr
+          th 託售單編號
+          th 託售物品
+          th 申請託售時間
+          th 操作
+      tbody
+        - @consignments.each do |consignment|
+          tr
+            td= consignment.id
+            td= link_to consignment.each_name, admin_consignment_path(consignment)
+            td= l consignment.created_at, format: :short
+            td= link_to '編輯', edit_admin_consignment_path(consignment)
+  .row-fluid
+    = will_paginate @consignments

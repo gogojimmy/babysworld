@@ -1,0 +1,9 @@
+.row-fluid
+  .span12
+    .well
+      .navbar.navbar-heading
+        .navbar-inner
+          .container style="width: auto;"
+            a.brand href="#" 編輯 #{@product.name}
+      #product_form
+        = render :partial => 'form'

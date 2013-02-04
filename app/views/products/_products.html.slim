@@ -1,0 +1,58 @@
+- products.each_slice(3) do |a, b, c|
+  ul.thumbnails.products
+    = div_for a, :class => "product span4" do
+      .thumbnail
+        - if a.product_images.size > 0
+          .product-image
+            = link_to(image_tag(a.product_images.first.image.url(:thumb)), product_path(a))
+        - else
+          = link_to(image_tag("http://placekitten.com/g/200/200"), product_path(a))
+        .caption
+          h4= link_to a.name, product_path(a)
+          span.price $ #{a.price}
+          - if a.status != 'replenish'
+            = link_to a.url, :target => "_blank", :class => 'btn' do
+                i.icon-shopping-cart
+                '
+                | 買下來
+          - else
+            a.btn.btn-danger.disabled href="javascript:;" 補貨中
+          .clearfix
+    - if b
+      = div_for b, :class => "product span4" do
+        .thumbnail
+          - if b.product_images.size > 0
+            .product-image
+              = link_to(image_tag(b.product_images.first.image.url(:thumb)), product_path(b))
+          - else
+            = link_to(image_tag("http://placekitten.com/g/200/200"), product_path(b))
+          .caption
+            h4= link_to b.name, product_path(b)
+            span.price $ #{a.price}
+            - if b.status != 'replenish'
+              = link_to a.url, :target => "_blank", :class => 'btn' do
+                i.icon-shopping-cart
+                '
+                | 買下來
+            - else
+              a.btn.btn-danger.disabled href="javascript:;" 補貨中
+            .clearfix
+    - if c
+      = div_for c, :class => "product span4" do
+        .thumbnail
+          - if c.product_images.size > 0
+            .product-image
+              = link_to(image_tag(c.product_images.first.image.url(:thumb)), product_path(c))
+          - else
+            = link_to(image_tag("http://placekitten.com/g/200/200"), product_path(c))
+          .caption
+            h4= link_to c.name, product_path(c)
+            span.price $ #{a.price}
+            - if c.status != 'replenish'
+              = link_to a.url, :target => "_blank", :class => 'btn' do
+                i.icon-shopping-cart
+                '
+                | 買下來
+            - else
+              a.btn.btn-danger.disabled href="javascript:;" 補貨中
+          .clearfix

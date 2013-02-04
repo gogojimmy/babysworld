@@ -1,0 +1,13 @@
+#tags
+  h4
+    i.icon.icon-folder-close
+    '
+    | 分類
+  ul.tags
+    - @tags.each_with_index do |p, index|
+      - if index.even?
+        li.bg_white
+          = link_to p.name, tag_path(p.name)
+      - else
+        li
+          = link_to p.name, tag_path(p.name)

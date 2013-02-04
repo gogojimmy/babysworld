@@ -1,0 +1,7 @@
+= simple_form_for([:admin, @banner], :html => { :class => 'form-horizontal' }) do |f|
+  = f.input :start_date, :label => "開始時間"
+  = f.input :end_date, :label => "結束時間"
+  = f.input :banner, label: "廣告圖片"
+  = f.input :url, label: "廣告連結網址"
+  .form-actions
+    = f.submit "儲存", :class => 'btn btn-primary'

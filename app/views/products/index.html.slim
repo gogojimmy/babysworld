@@ -1,0 +1,32 @@
+- title '商品列表'
+- description '寶寶世界二手屋有最多的寶寶二手商品，所有販售的商品都經過寶寶世界二手屋的專業清潔與認證，讓爸爸媽媽們買的放心、用的安心'
+#productsCarousel.carousel.slide.span12
+  /! Carousel items
+  .carousel-inner
+    - @banners.each_with_index do |banner, index|
+      - if index == 0
+        .item.active
+          = link_to image_tag(banner.banner.url), banner.url, target: "_blank"
+      - else
+        .item
+          = link_to image_tag(banner.banner.url), banner.url, target: "_blank"
+
+  /! Carousel nav
+  a.carousel-control.left href="#productsCarousel" data-slide="prev" &lsaquo;
+  a.carousel-control.right href="#productsCarousel" data-slide="next" &rsaquo;
+.sidebar.span3
+  .row-fluid
+    = link_to "我要託售商品", new_consignment_path, class: 'btn btn-success btn-large span12 i-want-to-sell'
+  .row-fluid
+    = form_tag products_path, method: :get, class: 'form-search' do
+      = text_field_tag :search, params[:search], class: 'search-query span12'
+      .icon-search
+  .clearfix
+  = render "shared/tags_aside"
+.products.span9
+  #title-nav.navbar
+    .navbar-inner
+      a.brand 最新上架商品
+  .row-fluid
+    = render partial: "products", locals: { products: @products }
+  = will_paginate @products

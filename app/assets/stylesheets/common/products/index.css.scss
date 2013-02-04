@@ -1,0 +1,36 @@
+@import "compass/css3/box-shadow";
+
+.thumbnail {
+  background: white;
+  @include single-box-shadow(#DDD, 0px, 3px, 2px, -1px);
+  .caption {
+    span.price {
+      float: left;
+      font-size: 1.5em;
+      line-height: 1.8em;
+      font-weight: bold;
+      color: #D35A5A;
+    }
+    .btn { float: right; }
+  }
+  .product-image {
+    height: 200px;
+    line-height :200px;
+    img {
+      vertical-align : middle;
+    }
+  }
+}
+
+a.i-want-to-sell {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+#title-nav {
+  a.brand {
+    color: #A97430;
+  }
+}

@@ -1,0 +1,12 @@
+.nested-fields.well
+  = f.input :name, label: '商品名稱', hint: '請輸入欲託售的商品名稱'
+  = f.input :brand, label: '品牌'
+  = f.input :path, label: '購買通路'
+  = f.input :warranty, label: '是否還在保固狀態？'
+  = f.input :guarantee, label: '是否附保證書'
+  = f.input :price, label: '欲託售價格'
+  = f.input :how_new, label: '物品狀態', as: :radio_buttons, collection: ConsignmentProduct::HOW_NEW_STATUS, include_blank: false, :item_wrapper_class => 'inline'
+  = f.input :short_coming, label: '汙損/故障處說明', input_html: { rows: 5, class: 'span8' }
+  = f.input :comment, label: '備註', input_html: { rows: 5, class: 'span8' }
+  = f.input :attachment, label: '照片(非必填)'
+  = f.input :dealing_status, label: '處理狀態', as: :radio_buttons, collection: ConsignmentProduct::DEALING_STATUS, :item_wrapper_class => 'inline'

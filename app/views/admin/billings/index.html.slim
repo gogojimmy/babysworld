@@ -1,0 +1,47 @@
+.tabbable.tabs-custom
+  ul.nav.nav-tabs
+    li.active
+      a href="#open" data-toggle="tab" 申請中
+    li
+      a href="#closed" data-toggle="tab" 已處理
+  .tab-content
+    .tab-pane.active.fade.in#open
+      table.table.table-striped.table-bordered.table-condensed
+        thead
+          tr
+            th 姓名
+            th 戶名
+            th 銀行
+            th 帳號
+            th 金額
+            th 操作
+        tbody
+          - @open_billings.each do |billing|
+            tr
+              td= billing.user.chinese_name
+              td= billing.user.account
+              td= "#{billing.user.bank}(#{billing.user.bank_num})"
+              td= billing.user.account_num
+              td= billing.amount
+              td= link_to '操作', edit_admin_billing_path(billing)
+      = will_paginate @open_billings
+    .tab-pane.fade#closed
+      table.table.table-striped.table-bordered.table-condensed
+        thead
+          tr
+            th 姓名
+            th 戶名
+            th 銀行
+            th 帳號
+            th 金額
+            th 操作
+        tbody
+          - @closed_billings.each do |billing|
+            tr
+              td= billing.user.chinese_name
+              td= billing.user.account
+              td= "#{billing.user.bank}(#{billing.user.bank_num})"
+              td= billing.user.account_num
+              td= billing.amount
+              td= link_to '操作', edit_admin_billing_path(billing)
+    = will_paginate @closed_billings

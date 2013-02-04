@@ -1,0 +1,16 @@
+development:
+  facebook:
+    app_id: "350496915030972"
+    secret_key: "6c86b2ddf803799afdafbc4693f68058"
+staging:
+  facebook:
+    app_id: "350496915030972"
+    secret_key: "6c86b2ddf803799afdafbc4693f68058"
+test:
+  facebook:
+    app_id: "12341234"
+    secret_key: "barbarbarbar"
+production:
+  facebook:
+    app_id: "350496915030972"
+    secret_key: "6c86b2ddf803799afdafbc4693f68058"

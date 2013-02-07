@@ -20,8 +20,8 @@
             td= product.name
             td= product.brand
             td= product.path
-            td= product.warranty
-            td= product.guarantee
+            td= t (product.warranty? == true).to_s
+            td= t (product.guarantee? == true).to_s
             td= product.price
             td= product.how_new
             td= product.short_coming

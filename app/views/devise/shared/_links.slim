@@ -1,11 +1,11 @@
 - if controller_name != 'sessions'
   = link_to I18n.t('devise.instructions.sign_in'), new_session_path(resource_name)
   br/
-- if devise_mapping.registerable? && controller_name != 'registrations'
-  = link_to I18n.t('devise.instructions.sign_up'), new_registration_path(resource_name)
-  br/
+/- if devise_mapping.registerable? && controller_name != 'registrations'
+  /= link_to I18n.t('devise.instructions.sign_up'), new_registration_path(resource_name)
+  /br/
 - if devise_mapping.recoverable? && controller_name != 'passwords'
-  = link_to I18n.t('devise.instructions.forget_your_password'), new_password_path(resource_name)
+  = link_to I18n.t('devise.instructions.forgot_your_password'), new_password_path(resource_name)
   br/
 - if devise_mapping.confirmable? && controller_name != 'confirmations'
   = link_to I18n.t('devise.instructions.didnt_receive_confirmation_mail'), new_confirmation_path(resource_name)

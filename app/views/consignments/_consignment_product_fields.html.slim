@@ -3,8 +3,8 @@
     = f.input :name, label: '商品名稱', hint: '請輸入欲託售的商品名稱'
     = f.input :brand, label: '品牌'
     = f.input :path, label: '購買通路'
-    = f.input :warranty, label: '是否還在保固狀態？'
-    = f.input :guarantee, label: '是否附保證書'
+    = f.input :warranty, label: '是否還在保固狀態？', as: :radio_buttons, item_wrapper_class: 'inline'
+    = f.input :guarantee, label: '是否附保證書', as: :radio_buttons, item_wrapper_class: 'inline'
     = f.input :price, label: '欲託售價格'
     = f.input :how_new, label: '物品狀態', as: :select, include_blank: false, collection: ConsignmentProduct::HOW_NEW_STATUS, include_blank: false, :item_wrapper_class => 'inline'
   .span6

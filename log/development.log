@@ -31246,3 +31246,356 @@ Served asset /striped_lens.png - 304 Not Modified (4ms)
 
 Started GET "/assets/font-awesome/font/fontawesome-webfont.woff" for 127.0.0.1 at 2013-02-05 01:50:47 +0800
 Served asset /font-awesome/font/fontawesome-webfont.woff - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/admin/products" for 127.0.0.1 at 2013-02-06 01:19:36 +0800
+Processing by Admin::ProductsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mProduct Load (1.6ms)[0m  SELECT `products`.* FROM `products` ORDER BY created_at desc LIMIT 30 OFFSET 0
+  Rendered admin/products/index.html.slim within layouts/admin (22.0ms)
+Compiled admin_common/addon-styles.css  (0ms)  (pid 32693)
+Compiled admin_common/alert-messages.css  (0ms)  (pid 32693)
+Compiled admin_common/base.css  (0ms)  (pid 32693)
+Compiled admin_common/breadcrumb.css  (0ms)  (pid 32693)
+Compiled admin_common/buttons.css  (0ms)  (pid 32693)
+Compiled admin_common/datepicker.css  (0ms)  (pid 32693)
+Compiled admin_common/dropdowns.css  (0ms)  (pid 32693)
+Compiled admin_common/font-awesome.css  (0ms)  (pid 32693)
+Compiled admin_common/fontface.css  (4ms)  (pid 32693)
+Compiled admin_common/form.css  (0ms)  (pid 32693)
+Compiled admin_common/google-maps.css  (0ms)  (pid 32693)
+Compiled admin_common/gradients.css  (0ms)  (pid 32693)
+Compiled admin_common/header.css  (0ms)  (pid 32693)
+Compiled admin_common/icomoon.css  (0ms)  (pid 32693)
+Compiled admin_common/jqplot.css  (2ms)  (pid 32693)
+Compiled admin_common/kuta-responsive.css  (0ms)  (pid 32693)
+Compiled admin_common/main-content.css  (0ms)  (pid 32693)
+Compiled admin_common/pagination.css  (0ms)  (pid 32693)
+Compiled admin_common/progress-bars.css  (0ms)  (pid 32693)
+Compiled admin_common/redactor.css  (0ms)  (pid 32693)
+Compiled admin_common/sidebar.css  (0ms)  (pid 32693)
+Compiled admin_common/slider.css  (0ms)  (pid 32693)
+Compiled admin_common/styles.css  (0ms)  (pid 32693)
+Compiled admin_common/tabs.css  (0ms)  (pid 32693)
+Compiled admin_common/timepicker.css  (0ms)  (pid 32693)
+Compiled admin_common/widgets.css  (0ms)  (pid 32693)
+Compiled admin.css  (1959ms)  (pid 32693)
+  [1m[36m (1.4ms)[0m  [1mSELECT COUNT(*) FROM `billings` WHERE `billings`.`done` = 0[0m
+Completed 200 OK in 2427ms (Views: 2364.1ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/admin_common/addon-styles.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/addon-styles.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin.css - 304 Not Modified (66ms)
+
+
+Started GET "/assets/admin_common/breadcrumb.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/breadcrumb.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admin_common/alert-messages.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/alert-messages.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/dropdowns.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/dropdowns.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/base.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/base.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/buttons.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/buttons.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/form.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/form.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/datepicker.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/datepicker.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/google-maps.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/google-maps.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/font-awesome.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/font-awesome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/fontface.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/fontface.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/jqplot.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/jqplot.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/header.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/header.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/kuta-responsive.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/kuta-responsive.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/slider.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/slider.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/admin_common/styles.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/styles.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/gradients.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/gradients.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin_common/pagination.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/pagination.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/redactor.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/redactor.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/tabs.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:39 +0800
+Served asset /admin_common/tabs.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/main-content.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/main-content.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/sidebar.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/sidebar.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/icomoon.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/icomoon.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/admin_common/timepicker.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/timepicker.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/progress-bars.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/progress-bars.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/products.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /products.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-alert.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/widgets.css?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/widgets.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/common.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /common.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-scrollspy.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-tab.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-typeahead.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/cocoon.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /cocoon.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/font-awesome/css/font-awesome.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /font-awesome/css/font-awesome.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/fontface.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/fontface.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_nested_form.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /jquery_nested_form.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bootstrap-carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/admin_common/font-awesome.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/font-awesome.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin_common/main-content.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/main-content.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin_common/header.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/header.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/admin_common/icomoon.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/icomoon.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin_common/progress-bars.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/progress-bars.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin_common/breadcrumb.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/breadcrumb.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/admin_common/sidebar.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/sidebar.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin_common/pagination.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/pagination.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin_common/base.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/base.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin_common/buttons.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/buttons.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin_common/alert-messages.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/alert-messages.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin_common/form.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/form.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin_common/gradients.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/gradients.css - 304 Not Modified (46ms)
+
+
+Started GET "/assets/admin_common/dropdowns.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/dropdowns.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin_common/widgets.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/widgets.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/admin_common/slider.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/slider.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin_common/redactor.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/redactor.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/admin_common/tabs.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/tabs.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin_common/jqplot.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/jqplot.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/admin_common/datepicker.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/datepicker.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin_common/timepicker.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/timepicker.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin_common/google-maps.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/google-maps.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/admin_common/kuta-responsive.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/kuta-responsive.css - 304 Not Modified (48ms)
+
+
+Started GET "/assets/admin_common/addon-styles.css" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /admin_common/addon-styles.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/droid-sans/DroidSans-webfont.woff" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /droid-sans/DroidSans-webfont.woff - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bebas-neue/BebasNeue-webfont.woff" for 127.0.0.1 at 2013-02-06 01:19:40 +0800
+Served asset /bebas-neue/BebasNeue-webfont.woff - 304 Not Modified (2ms)
+
+
+Started GET "/assets/fontawesome/fontawesome-webfont.woff" for 127.0.0.1 at 2013-02-06 01:19:41 +0800
+Served asset /fontawesome/fontawesome-webfont.woff - 304 Not Modified (1ms)
+
+
+Started GET "/assets/yanone-Kaffeesatz/YanoneKaffeesatz-Regular-webfont.woff" for 127.0.0.1 at 2013-02-06 01:19:41 +0800
+Served asset /yanone-Kaffeesatz/YanoneKaffeesatz-Regular-webfont.woff - 304 Not Modified (2ms)
+
+
+Started GET "/assets/font-awesome/font/fontawesome-webfont.woff" for 127.0.0.1 at 2013-02-06 01:19:41 +0800
+Served asset /font-awesome/font/fontawesome-webfont.woff - 304 Not Modified (3ms)
+
+
+Started GET "/assets/icomoon/icomoon.svg" for 127.0.0.1 at 2013-02-06 01:19:41 +0800
+Served asset /icomoon/icomoon.svg - 304 Not Modified (1ms)

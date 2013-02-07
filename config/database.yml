@@ -25,7 +25,7 @@ staging:
   database: babysworld_test
   pool: 5
   username: root
-  password:
+  password: '0000'
   socket: /tmp/mysql.sock
 
 production:
@@ -35,5 +35,5 @@ production:
   database: babysworld_production
   pool: 5
   username: root
-  password:
+  password: '0000'
   socket: /tmp/mysql.sock

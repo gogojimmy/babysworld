@@ -14,11 +14,11 @@ class ConsignmentProduct < ActiveRecord::Base
   process_in_background :attachment
   store_in_background :attachment
 
-  DEALING_STATUS = %w{ 等待處理 上架中 已受理，待上架 退回 已售出，可請款 已申請請款，處理中 已請款 }
+  DEALING_STATUS = %w{ 等待處理 上架中 已受理，待上架 退回 已售出，結帳中 可請款 已申請請款，處理中 已請款 }
   HOW_NEW_STATUS = %w{ 全新 九成新 八成新 七成新 六成新 }
 
   def update_user_money
-    if dealing_status_changed? && dealing_status == '已售出，可請款'
+    if dealing_status_changed? && dealing_status == '已售出，結帳中'
       price = (( price * 0.3 ) - 10)
       consignment.user.money_can_apply += price
       consignment.user.save

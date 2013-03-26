@@ -28,8 +28,9 @@ html lang="zh_TW"
           .span12
             - flash.each do |name, msg|
               div{class="alert alert-#{name == :notice ? "success" : "error"} fade in"}
-                a.close data-dismiss="alert" &times;
-                = simple_format(msg)
+                h2
+                  a.close data-dismiss="alert" &times;
+                  = simple_format(msg)
         = yield
     hr
     footer.footer

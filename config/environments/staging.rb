@@ -65,7 +65,7 @@ Babysworld::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
-  config.action_mailer.default_url_options = { :host => 'http://staging.babysworld.tw' }
+  config.action_mailer.default_url_options = { :host => 'staging.babysworld.tw' }
 end
 
 Babysworld::Application.config.middleware.use ExceptionNotifier,

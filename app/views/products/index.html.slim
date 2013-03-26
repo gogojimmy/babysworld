@@ -1,6 +1,6 @@
 - title '商品列表'
 - description '寶寶世界二手屋有最多的寶寶二手商品，所有販售的商品都經過寶寶世界二手屋的專業清潔與認證，讓爸爸媽媽們買的放心、用的安心'
-#productsCarousel.carousel.slide.span12
+/#productsCarousel.carousel.slide.span12
   /! Carousel items
   .carousel-inner
     - @banners.each_with_index do |banner, index|
@@ -12,8 +12,9 @@
           = link_to image_tag(banner.banner.url), banner.url, target: "_blank"
 
   /! Carousel nav
-  a.carousel-control.left href="#productsCarousel" data-slide="prev" &lsaquo;
-  a.carousel-control.right href="#productsCarousel" data-slide="next" &rsaquo;
+  /a.carousel-control.left href="#productsCarousel" data-slide="prev" &lsaquo;
+  /a.carousel-control.right href="#productsCarousel" data-slide="next" &rsaquo;
+= image_tag('banner.jpg', class: 'banner')
 .span12
   section.page-header.services
     .row-fluid

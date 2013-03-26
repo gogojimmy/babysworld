@@ -9,6 +9,7 @@ class ConsignmentProduct < ActiveRecord::Base
   belongs_to :product
   delegate :price, :name, to: :product, prefix: true, allow_nil: true
   after_save :update_user_money
+  validates_numericality_of :price, greather_than: 0
 
   mount_uploader :attachment
   process_in_background :attachment

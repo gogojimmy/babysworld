@@ -13,6 +13,7 @@ class Admin::ConsignmentProducts::ProductsController < ApplicationController
     @product = consignment_product.build_product(params[:product])
     @product.user = current_user
     if @product.save
+      consignment_product.save
       redirect_to admin_products_path, notice: '建立成功'
     else
       render :new, error: @product.errors

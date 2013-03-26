@@ -7,7 +7,7 @@ class ConsignmentProduct < ActiveRecord::Base
   belongs_to :consignment
   validates_presence_of :name
   belongs_to :product
-  delegate :price, to: :product, prefix: true, allow_nil: true
+  delegate :price, :name, to: :product, prefix: true, allow_nil: true
   after_save :update_user_money
 
   mount_uploader :attachment
@@ -19,6 +19,7 @@ class ConsignmentProduct < ActiveRecord::Base
 
   def update_user_money
     if dealing_status_changed? && dealing_status == '已售出，可請款'
+      price = (( price * 0.3 ) - 10)
       consignment.user.money_can_apply += price
       consignment.user.save
     elsif dealing_status_changed? && dealing_status == '已請款'
@@ -26,5 +27,12 @@ class ConsignmentProduct < ActiveRecord::Base
       consignment.user.money_already_earned += price
       consignment.user.save
     end
+  end
+
+  def to_product
+    product = build_product
+    product.name = name
+    product.price = price
+    product
   end
 end

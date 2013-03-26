@@ -28,7 +28,7 @@
             = link_to(image_tag("http://placekitten.com/g/200/200"), product_path(b))
           .caption
             h4= link_to b.name, product_path(b)
-            span.price $ #{a.price}
+            span.price $ #{b.price}
             - if b.status != 'replenish'
               = link_to a.url, :target => "_blank", :class => 'btn' do
                 i.icon-shopping-cart
@@ -47,7 +47,7 @@
             = link_to(image_tag("http://placekitten.com/g/200/200"), product_path(c))
           .caption
             h4= link_to c.name, product_path(c)
-            span.price $ #{a.price}
+            span.price $ #{c.price}
             - if c.status != 'replenish'
               = link_to a.url, :target => "_blank", :class => 'btn' do
                 i.icon-shopping-cart

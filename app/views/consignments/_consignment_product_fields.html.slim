@@ -5,10 +5,12 @@
     = f.input :path, label: '購買通路'
     = f.input :warranty, label: '是否還在保固狀態？', as: :radio_buttons, item_wrapper_class: 'inline'
     = f.input :guarantee, label: '是否附保證書', as: :radio_buttons, item_wrapper_class: 'inline'
-    = f.input :price, label: '欲託售價格'
+    = f.input :price, as: :string, label: '欲託售價格', hint: '請注意最終價格將由寶寶世界二手屋決定', input_html: { class: 'price' }
+    .final_price
     = f.input :how_new, label: '物品狀態', as: :select, include_blank: false, collection: ConsignmentProduct::HOW_NEW_STATUS, include_blank: false, :item_wrapper_class => 'inline'
   .span6
     = f.input :short_coming, label: '汙損/故障處說明', input_html: { rows: 5, class: 'span12' }
     = f.input :comment, label: '備註', input_html: { rows: 5, class: 'span12' }
     = f.input :attachment, label: '照片(非必填)'
   .clearfix
+  = link_to_remove_association "移除這筆商品", f, class: 'btn btn-danger btn-mini'

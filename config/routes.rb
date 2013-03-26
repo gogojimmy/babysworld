@@ -18,6 +18,9 @@ Babysworld::Application.routes.draw do
     resources :products
     resources :banners
     resources :consignments
+    resources :consignment_products do
+      resources :products, controller: 'consignment_products/products'
+    end
     resources :billings
   end
 

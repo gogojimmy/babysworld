@@ -6,11 +6,13 @@ class Product < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
   has_many :product_images, :dependent => :destroy
-  accepts_nested_attributes_for :product_images, :allow_destroy => true
+  accepts_nested_attributes_for :product_images, :reject_if => :all_blank, :allow_destroy => true
   validates_presence_of :name, :description, :user, :price,
                         :ruten_no
   has_one :consignment_product
   acts_as_taggable
+  has_one :consignment_product
+  delegate :name, to: :consignment_product, allow_nil: true, prefix: true
 
   default_scope :order => 'created_at desc'
 

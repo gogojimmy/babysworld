@@ -6,26 +6,23 @@
   header.page-header
     h1= @product.name
   .row
-    #productCarousel.carousel.slide.span6
-      /! Carousel items
-      .carousel-inner
-        - if @product.product_images.size == 0
-          .item.active
-            = image_tag("http://placekitten.com/g/800/300", :size => "500x300")
-          .item
-            = image_tag("http://placekitten.com/g/400/300", :size => "500x300")
-          .item
-            = image_tag("http://placekitten.com/g/600/300", :size => "500x300")
-        - @product.product_images.each_with_index do |image, index|
-          - if index == 0
-            .item.active
-              = image_tag(image.image.url(:product))
-          - else
-            .item
-              = image_tag(image.image.url(:product))
-      /! Carousel nav
-      a.carousel-control.left href="#productCarousel" data-slide="prev" &lsaquo;
-      a.carousel-control.right href="#productCarousel" data-slide="next" &rsaquo;
+    - if @product.product_images.size <= 1
+      .span6
+        = image_tag(@product.product_images.first.image.url(:product))
+    - else
+      #productCarousel.carousel.slide.span6
+        /! Carousel items
+        .carousel-inner
+          - @product.product_images.each_with_index do |image, index|
+            - if index == 0
+              .item.active
+                = image_tag(image.image.url(:product))
+            - else
+              .item
+                = image_tag(image.image.url(:product))
+        /! Carousel nav
+        a.carousel-control.left href="#productCarousel" data-slide="prev" &lsaquo;
+        a.carousel-control.right href="#productCarousel" data-slide="next" &rsaquo;
     .product-main.span3
       .well.info-block
         - if @product.original_price != 0
@@ -47,12 +44,14 @@
     ul.nav.nav-tabs
       li.active
         a href="#product-description" data-toggle="tab" 商品描述
-      li
-        a href="#product-notice" data-toggle="tab" 注意事項
+      - if @product.description.present?
+        li
+          a href="#product-notice" data-toggle="tab" 注意事項
     .tab-content
       .tab-pane.active.fade.in#product-description
         = simple_format @product.description
-      .tab-pane.fade#product-notice
-        = simple_format @product.notice
+      - if @product.description.present?
+        .tab-pane.fade#product-notice
+          = simple_format @product.notice
   .disinfection-statement.alert.alert-success
     = render "shared/disinfection"

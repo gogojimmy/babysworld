@@ -1,4 +1,4 @@
-= simple_form_for([:admin, @product], :html => { :class => 'form-horizontal' }) do |f|
+= simple_form_for([:admin, :consignment_product, @product], :html => { :class => 'form-horizontal' }) do |f|
   = f.input :name, :label => "商品名稱", :input_html => { :class => "span10" }
   = f.input :description, :label => "商品描述", :input_html => { :class => "span10" }
   = f.input :notice, :label => "注意事項", :input_html => { :class => "span10" }

@@ -12,6 +12,7 @@
               th 商品編號
               th 商品分類
               th 商品名稱
+              th 原託售商品
               th 原價
               th 售價
               th 露天編號
@@ -25,6 +26,7 @@
                 td= product.id
                 td= raw product.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
                 td= link_to product.name, admin_product_path(product)
+                td= link_to product.consignment_product, product.consignment_product_name, admin_consignment_product_path(product.consignment_product) if product.consignment_product
                 td= product.original_price
                 td= product.price
                 td= link_to product.ruten_no, product.url

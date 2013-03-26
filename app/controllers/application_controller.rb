@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
     current_user && current_user.is_admin?
   end
 
+  def delayed_job_admin_authentication
+    authenticate_admin
+  end
+
   def find_tags
     @tags = Product.tag_counts
   end

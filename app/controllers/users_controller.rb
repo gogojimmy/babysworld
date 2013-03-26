@@ -11,7 +11,11 @@ class UsersController < ApplicationController
     if @user.update_attributes(params[:user].slice(:marketing,
                                                    :chinese_name,
                                                    :address,
-                                                   :phone))
+                                                   :phone,
+                                                   :bank,
+                                                   :bank_num,
+                                                   :account,
+                                                   :account_num))
       redirect_to edit_user_path(@user), notice: '資料更新成功'
     else
       render :edit

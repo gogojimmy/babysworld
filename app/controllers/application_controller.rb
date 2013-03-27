@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate if Rails.env.staging?
+  #before_filter :authenticate if Rails.env.staging?
   before_filter :find_tags
   protect_from_forgery
 

@@ -13,6 +13,7 @@ Babysworld::Application.routes.draw do
   get '/user_consignment', to: 'welcome#user_consignment'
   get '/consignment_about', to: 'welcome#consignment_about'
   get '/faq', to: 'welcome#faq'
+  get '/robots.txt', to: 'welcome#robots'
 
   get 'tags/:tag', to: 'products#index', as: :tag
 

@@ -23,6 +23,19 @@ html lang="zh_TW"
                       a href="/about" 關於寶寶世界二手屋
                 ul.nav.pull-right
                   = render :partial => "shared/user_status_panel"
+            /- unless current_user
+              /= link_to "註冊", new_user_registration_path
+              /'
+              /' |
+              /'
+              /= link_to "登入", new_user_session_path
+            /- else
+              /= link_to destroy_user_session_path, :method => :delete do
+                /|  登出
+                /'
+                /i.icon-signout
+      .row
+        .span9
       article.row
         - if flash.count != 0
           .span12

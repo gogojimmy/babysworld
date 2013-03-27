@@ -10,4 +10,10 @@ class WelcomeController < ApplicationController
 
   def user_consignment
   end
+
+  def consignment_about
+  end
+
+  def faq
+  end
 end

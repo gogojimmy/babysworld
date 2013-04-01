@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
 gem 'devise'
+gem 'devise-i18n'
 gem 'will_paginate'
 gem 'slim'
 gem 'simple_form'
@@ -17,7 +18,7 @@ gem 'delayed_job_admin'
 gem 'daemons'
 gem 'awesome_print'
 gem 'carrierwave'
-gem 'carrierwave_backgrounder'
+#gem 'carrierwave_backgrounder'
 gem 'rmagick'
 gem 'nested_form'
 gem 'acts-as-taggable-on'

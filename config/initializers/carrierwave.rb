@@ -30,8 +30,7 @@ module CarrierWave
   end
 end
 
-CarrierWave::Backgrounder.configure do |c|
+#CarrierWave::Backgrounder.configure do |c|
   # :delayed_job, :girl_friday, :sidekiq, :qu, :resque, or :qc
-  c.backend = :delayed_job
-end
-
+  #c.backend = :delayed_job
+#end

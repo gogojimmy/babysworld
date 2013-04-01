@@ -12,8 +12,8 @@ class ConsignmentProduct < ActiveRecord::Base
   validates_numericality_of :price, greather_than: 0
 
   mount_uploader :attachment
-  process_in_background :attachment
-  store_in_background :attachment
+  #process_in_background :attachment
+  #store_in_background :attachment
 
   DEALING_STATUS = %w{ 等待處理 上架中 已受理，待上架 退回 已售出，結帳中 可請款 已申請請款，處理中 已請款 }
   HOW_NEW_STATUS = %w{ 全新 九成新 八成新 七成新 六成新 }

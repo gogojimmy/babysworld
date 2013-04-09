@@ -5,7 +5,6 @@ class ImageUploader < CarrierWave::Uploader::Base
   include CarrierWave::RMagick
   include Sprockets::Helpers::RailsHelper
   include Sprockets::Helpers::IsolatedHelper
-  include ::CarrierWave::Backgrounder::Delay
 
   storage :file
   def store_dir

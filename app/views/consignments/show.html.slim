@@ -30,7 +30,7 @@
               td= link_to "下載", product.attachment_url
             - else
               td
-            td= t product.dealing_status
+            td= product.dealing_status
   .row-fluid
     = will_paginate @products
 

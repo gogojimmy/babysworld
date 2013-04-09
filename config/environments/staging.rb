@@ -68,6 +68,8 @@ Babysworld::Application.configure do
   config.action_mailer.default_url_options = { :host => 'staging.babysworld.tw' }
 end
 
+MAIN_URL = 'http://staging.babysworld.tw'
+
 Babysworld::Application.config.middleware.use ExceptionNotifier,
   :email_prefix => "[Exception Notifier - Staging] ",
   :sender_address => %{"notifier" <jimmy@babysworld.tw>},

@@ -18,7 +18,11 @@ Babysworld::Application.routes.draw do
   get 'tags/:tag', to: 'products#index', as: :tag
 
   namespace :admin do
-    resources :products
+    resources :products do
+      put '/release', to: 'products#release'
+      put '/waiting_for_money', to: 'products#waiting_for_money'
+      put '/sold', to: 'products#sold'
+    end
     resources :banners
     resources :consignments
     resources :consignment_products do
@@ -31,8 +35,15 @@ Babysworld::Application.routes.draw do
     resources :billings, only: [:create, :index]
   end
 
+  resources :billings do
+    resources :consignment_products, only: [:index]
+  end
+
   resources :products, :only => [:index, :show]
 
   resources :consignments
+  resources :consignment_products do
+    put '/billing', to: 'consignment_products#billing'
+  end
 
 end

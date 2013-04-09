@@ -41,4 +41,30 @@ class Admin::ProductsController < ApplicationController
     end
   end
 
+  def release
+    @product = Product.find(params[:product_id])
+    if @product.release
+      redirect_to admin_products_path, notice: '商品狀態變更為已上架'
+    else
+      redirect_to admin_products_path, error: "商品狀態變更失敗，原因:#{@product.errors}"
+    end
+  end
+
+  def waiting_for_money
+    @product = Product.find(params[:product_id])
+    if @product.waiting_for_money
+      redirect_to admin_products_path, notice: '商品狀態變更為補貨中'
+    else
+      redirect_to admin_products_path, error: "商品狀態變更失敗，原因:#{@product.errors}"
+    end
+  end
+
+  def sold
+    @product = Product.find(params[:product_id])
+    if @product.sold
+      redirect_to admin_products_path, notice: '商品狀態變更為已售出'
+    else
+      redirect_to admin_products_path, error: "商品狀態變更失敗，原因:#{@product.errors}"
+    end
+  end
 end

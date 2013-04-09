@@ -1,3 +1,6 @@
+= @product.errors.each do |e|
+  .alert
+    = e
 = simple_form_for([:admin, :consignment_product, @product], :html => { :class => 'form-horizontal' }) do |f|
   = f.input :name, :label => "商品名稱", :input_html => { :class => "span10" }
   = f.input :description, :label => "商品描述", :input_html => { :class => "span10" }
@@ -10,6 +13,5 @@
   = f.input :original_price, :label => "市價", :input_html => { :class => "span10" }
   = f.input :price, :label => "售價", :input_html => { :class => "span10" }
   = f.input :ruten_no, :label => "露天編號", :input_html => { :class => "span10" }
-  = f.input :status, :label => "狀態", :collection => Product::STATUS.invert
   .form-actions
-    = f.submit "儲存", :class => 'btn btn-primary'
+    = f.submit "上架", :class => 'btn btn-primary'

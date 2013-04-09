@@ -1,0 +1,15 @@
+.span12
+  .consignments.article-content.rounded
+    .row-fluid
+      table.table.table-bordered.table-hover.table-condensed
+        thead
+          tr
+            th 託售物品
+            th 撥款時間
+            th 金額
+        tbody
+          - @consignment_products.each do |product|
+            tr
+              td= product.name
+              td= l @billing.updated_at, format: :short
+              td= currency_format product.can_billing_price

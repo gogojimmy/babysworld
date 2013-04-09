@@ -17,6 +17,7 @@
               th 售價
               th 露天編號
               th 狀態
+              th 狀態操作
               th 建立時間
               th 更新時間
               th 操作
@@ -31,6 +32,7 @@
                 td= product.price
                 td= link_to product.ruten_no, product.url
                 td= Product::STATUS[product.status]
+                td= render_product_btn(product)
                 td= l product.created_at, :format => :short
                 td= l product.updated_at, :format => :short
                 td

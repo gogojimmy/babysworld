@@ -31,13 +31,13 @@ class ConsignmentProduct < ActiveRecord::Base
   scope :can_billing, -> {with_dealing_status(:can_billing)}
 
   def can_billing_price
-    sum = (product.price * 0.7) - 10
+    sum = (product.price * 0.7) - 20
     sum.to_i
   end
 
   state_machine :dealing_status, :initial => :pending_to_deal do
     event :release do
-      transition :pending_to_deal => :released
+      transition [:pending_to_deal, :sold] => :released
     end
 
     event :deny do

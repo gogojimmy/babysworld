@@ -26,6 +26,7 @@ Babysworld::Application.routes.draw do
     resources :banners
     resources :consignments
     resources :consignment_products do
+      put '/deny', to: 'consignment_products#deny'
       resources :products, controller: 'consignment_products/products'
     end
     resources :billings

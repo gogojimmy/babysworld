@@ -25,7 +25,7 @@ class Product < ActiveRecord::Base
 
   state_machine :status, :initial => :waiting_for_review do
     event :release do
-      transition :waiting_for_review => :released
+      transition [:waiting_for_review, :replenish] => :released
     end
 
     event :waiting_for_money do
@@ -36,7 +36,7 @@ class Product < ActiveRecord::Base
       transition :replenish => :checked_out
     end
 
-    after_transition :waiting_for_review => :released do |product|
+    after_transition [:waiting_for_review, :replenish] => :released do |product|
       product.consignment_product.release if product.consignment_product.present?
     end
 

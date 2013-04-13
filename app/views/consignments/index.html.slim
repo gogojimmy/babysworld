@@ -17,14 +17,17 @@
             th 託售單編號
             th 託售物品
             th 申請託售時間
+            th 上架中商品
             th 託售狀態
         tbody
           - @consignments.each do |consignment|
             - consignment.consignment_products.each do |product|
+              - next if product.paid?
               tr
                 td= consignment.id
-                td= link_to product.name, consignment
+                td= product.name
                 td= l consignment.created_at, format: :short
-                td= product.dealing_status
+                td= render_product_link_for_consignment_product(product)
+                td class="#{billing_class(product)}"= ConsignmentProduct::DEALING_STATUS[product.dealing_status]
     .row-fluid
       = will_paginate @consignments

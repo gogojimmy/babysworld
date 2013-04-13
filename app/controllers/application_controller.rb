@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate if Rails.env.staging?
+  #before_filter :authenticate if Rails.env.staging?
   before_filter :find_tags
   protect_from_forgery
 
@@ -13,6 +13,10 @@ class ApplicationController < ActionController::Base
 
   def authenticate_admin
     current_user && current_user.is_admin?
+  end
+
+  def delayed_job_admin_authentication
+    authenticate_admin
   end
 
   def find_tags

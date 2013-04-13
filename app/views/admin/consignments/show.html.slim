@@ -20,6 +20,7 @@
               th 備註
               th 附件
               th 處理狀態
+              th 上架商品
           tbody
             - @products.each do |product|
               tr
@@ -36,5 +37,6 @@
                   td= link_to "下載", product.attachment_url
                 - else
                   td
-                td= t product.dealing_status
+                td= ConsignmentProduct::DEALING_STATUS[product.dealing_status]
+                td= show_consignment_product_dealing_link(product)
       = will_paginate @products

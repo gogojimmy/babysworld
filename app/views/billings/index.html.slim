@@ -17,12 +17,14 @@
             th 請款日期
             th 匯款時間
             th 處理狀態
+            th 請款商品
         tbody
           - @billings.each do |billing|
             tr
               td= l billing.created_at, format: :long
               td= l billing.updated_at, format: :long if billing.done?
               td= billing.done? ? "請款成功" : "處理中"
+              td= link_to '連結', billing_consignment_products_path(billing)
     .row-fluid
       = will_paginate @billings
 

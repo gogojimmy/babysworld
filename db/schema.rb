@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130204133835) do
+ActiveRecord::Schema.define(:version => 20130409170207) do
 
   create_table "banners", :force => true do |t|
     t.datetime "start_date"
@@ -52,8 +52,10 @@ ActiveRecord::Schema.define(:version => 20130204133835) do
     t.string   "attachment_tmp"
     t.boolean  "attachment_processing"
     t.integer  "product_id"
+    t.integer  "billing_id"
   end
 
+  add_index "consignment_products", ["billing_id"], :name => "index_consignment_products_on_billing_id"
   add_index "consignment_products", ["consignment_id"], :name => "index_consignment_products_on_consignment_id"
   add_index "consignment_products", ["product_id"], :name => "index_consignment_products_on_product_id"
 

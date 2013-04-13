@@ -23,13 +23,16 @@ html lang="zh_TW"
                       a href="/about" 關於寶寶世界二手屋
                 ul.nav.pull-right
                   = render :partial => "shared/user_status_panel"
+      .row
+        .span9
       article.row
         - if flash.count != 0
           .span12
             - flash.each do |name, msg|
               div{class="alert alert-#{name == :notice ? "success" : "error"} fade in"}
-                a.close data-dismiss="alert" &times;
-                = simple_format(msg)
+                h2
+                  a.close data-dismiss="alert" &times;
+                  = simple_format(msg)
         = yield
     hr
     footer.footer

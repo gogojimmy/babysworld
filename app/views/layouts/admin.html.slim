@@ -1,13 +1,13 @@
 doctype html
 html lang="zh"
-head
-  title #{t('brand')} | #{@title}
-  = stylesheet_link_tag    "admin"
-  = csrf_meta_tags
-  meta name="viewport" content="width=device-width" initial-scale="1.0"
-  meta charset="UTF-8"
-  / [if lt IE 9]
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  head
+    title #{t('brand')} | #{@title}
+    = stylesheet_link_tag    "admin"
+    = csrf_meta_tags
+    meta name="viewport" content="width=device-width" initial-scale="1.0"
+    meta charset="UTF-8"
+    / [if lt IE 9]
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   body
     /!-- header
     #header.navbar

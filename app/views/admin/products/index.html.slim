@@ -12,10 +12,12 @@
               th 商品編號
               th 商品分類
               th 商品名稱
+              th 原託售商品
               th 原價
               th 售價
               th 露天編號
               th 狀態
+              th 狀態操作
               th 建立時間
               th 更新時間
               th 操作
@@ -25,10 +27,12 @@
                 td= product.id
                 td= raw product.tag_list.map { |t| link_to t, tag_path(t) }.join(', ')
                 td= link_to product.name, admin_product_path(product)
+                td= link_to product.consignment_product_name, admin_consignment_product_path(product.consignment_product) if product.consignment_product
                 td= product.original_price
                 td= product.price
                 td= link_to product.ruten_no, product.url
                 td= Product::STATUS[product.status]
+                td= render_product_btn(product)
                 td= l product.created_at, :format => :short
                 td= l product.updated_at, :format => :short
                 td

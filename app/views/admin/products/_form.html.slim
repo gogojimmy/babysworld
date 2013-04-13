@@ -1,19 +1,14 @@
-= simple_nested_form_for([:admin, @product], :html => { :class => 'form-horizontal' }) do |f|
+= simple_form_for([:admin, @product], :html => { :class => 'form-horizontal' }) do |f|
   = f.input :name, :label => "商品名稱", :input_html => { :class => "span10" }
   = f.input :description, :label => "商品描述", :input_html => { :class => "span10" }
   = f.input :notice, :label => "注意事項", :input_html => { :class => "span10" }
-  .contrl-group
-    = f.fields_for :product_images do |product_image|
-      - if product_image.object.new_record?
-        = product_image.input :image, :label => "商品圖片"
-      - else
-        = image_tag(product_image.object.image.url(:thumb))
-        = product_image.link_to_remove "移除這張圖片", :class => 'btn btn-mini btn-danger'
-  = f.link_to_add "增加一張圖片", :product_images, :class => 'btn btn-mini btn-success'
+  = f.simple_fields_for :product_images do |product_image|
+    = render 'product_image_fields', f: product_image
+  .controls
+    = link_to_add_association '新增一張圖片', f, :product_images, class: 'btn btn-success btn-flat btn-small'
   = f.input :tag_list, :label => "分類(可使用逗點分隔指定多個分類)", :input_html => { :class => "span10" }
   = f.input :original_price, :label => "市價", :input_html => { :class => "span10" }
   = f.input :price, :label => "售價", :input_html => { :class => "span10" }
   = f.input :ruten_no, :label => "露天編號", :input_html => { :class => "span10" }
-  = f.input :status, :label => "狀態", :collection => Product::STATUS.invert
   .form-actions
     = f.submit "儲存", :class => 'btn btn-primary'

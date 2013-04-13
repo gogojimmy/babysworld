@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   # attr_accessible :title, :body
   has_many :products
   has_many :consignments
+  has_many :consignment_products, through: :consignments
   has_many :billings
 
   validates :terms, :inclusion => {:in => [true]}

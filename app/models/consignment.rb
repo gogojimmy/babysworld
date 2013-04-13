@@ -13,8 +13,6 @@ class Consignment < ActiveRecord::Base
 
   validates_presence_of :address, :phone, :chinese_name, :account, :bank, :account_num, :bank_num
 
-  STATUS = %w{ waiting approved dealing denied }
-
   def save_user_info
     if phone != user.phone || address != user.address || chinese_name != user.chinese_name
       user.update_attributes(address: address,

@@ -1,4 +1,6 @@
 zh_tw:
+  "true": 是
+  "false": 否
   waiting: '等待處理'
   dealing: '上架中'
   approved: '已受理，待上架'

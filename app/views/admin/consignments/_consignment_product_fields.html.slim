@@ -9,4 +9,3 @@
   = f.input :short_coming, label: '汙損/故障處說明', input_html: { rows: 5, class: 'span8' }
   = f.input :comment, label: '備註', input_html: { rows: 5, class: 'span8' }
   = f.input :attachment, label: '照片(非必填)'
-  = f.input :dealing_status, label: '處理狀態', as: :radio_buttons, collection: ConsignmentProduct::DEALING_STATUS, :item_wrapper_class => 'inline'

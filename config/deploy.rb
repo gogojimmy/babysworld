@@ -13,7 +13,6 @@ load "config/recipes/check"
 load "config/recipes/assets"
 load "config/recipes/remote_commands"
 
-set :application, "babysworld"
 set :repository,  "git@github.com:gogojimmy/babysworld.git"
 
 set :scm, :git
@@ -28,7 +27,7 @@ ssh_options[:forward_agent] = true
 
 namespace :deploy do
   task :custom_setup, :roles => [:app] do
-    run "cp #{shared_path}/config/*.yml #{release_path}/config/"
+    #run "cp #{shared_path}/config/*.yml #{release_path}/config/"
   end
 
   desc "reload the database with seed data"

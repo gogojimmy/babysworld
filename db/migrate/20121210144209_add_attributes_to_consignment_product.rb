@@ -9,7 +9,7 @@ class AddAttributesToConsignmentProduct < ActiveRecord::Migration
     add_column :consignment_products, :how_new, :string
     add_column :consignment_products, :short_coming, :text
     add_column :consignment_products, :comment, :text
-    add_column :consignment_products, :dealing_status, :string, default: '等待處理'
+    add_column :consignment_products, :dealing_status, :string
     add_column :consignment_products, :attachment, :string
     add_column :consignment_products, :attachment_tmp, :string
     add_column :consignment_products, :attachment_processing, :boolean

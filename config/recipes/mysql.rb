@@ -1,13 +1,6 @@
 namespace :mysql do
   task :sync do ; end
 
-  desc "Create a database for this application."
-  task :create_database, roles: :db, only: {primary: true} do
-    run %Q{#{sudo} -u postgres psql -c "create user #{mysql_user} with password '#{postgresql_password}';"}
-    run %Q{#{sudo} -u postgres psql -c "create database #{postgresql_database} owner #{postgresql_user};"}
-  end
-  after "deploy:setup", "postgresql:create_database"
-
   task :backup, :roles => :db, :only => { :primary => true } do
     run "mkdir -p #{shared_path}/backup"
     filename = "#{shared_path}/backup/#{application}.sql"
@@ -52,6 +45,8 @@ namespace :mysql do
       end
     end
   end
+
+  #after "deploy:setup", "mysql:setup"
 
   # Sets database variables from remote database.yaml
   def prepare_from_yaml

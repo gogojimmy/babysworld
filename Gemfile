@@ -25,6 +25,7 @@ gem 'meta-tags', :require => 'meta_tags'
 gem 'cells'
 gem 'cocoon'
 gem 'state_machine'
+gem 'unicorn'
 
 group :development do
   gem 'better_errors'

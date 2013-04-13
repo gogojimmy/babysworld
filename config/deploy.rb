@@ -1,7 +1,6 @@
 require 'capistrano/ext/multistage'
 require 'bundler/capistrano'
 require 'capistrano_colors'
-require "delayed/recipes"
 
 load "config/recipes/base"
 load "config/recipes/rvm"

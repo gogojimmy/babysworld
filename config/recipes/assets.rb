@@ -1,6 +1,6 @@
 namespace :assets do
   task :precompile, :role => :app do
-    run "cd #{release_path}/ && RAILS_ENV=staging bundle exec rake assets:precompile --trace"
+    run "cd #{release_path}/ && RAILS_ENV=#{rails_env} bundle exec rake assets:precompile --trace"
   end
   task :precompile, :roles => :web, :except => { :no_release => true } do
     from = source.next_revision(current_revision)

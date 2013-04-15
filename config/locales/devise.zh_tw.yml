@@ -18,6 +18,8 @@ zh_tw:
       invalid_token: '無效的認證代碼。'
       timeout: '您的登入時效過期，請重新登入，才能繼續。'
       inactive: '您的帳號尚未被啟用。'
+      user:
+        not_found_in_database: '找不到您的帳號，請確認Email是否正確'
     sessions:
       signed_in: '成功登入了。'
       signed_out: '成功登出了。'

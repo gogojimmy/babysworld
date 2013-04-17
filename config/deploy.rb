@@ -18,6 +18,7 @@ set :repository,  "git@github.com:gogojimmy/babysworld.git"
 set :scm, :git
 set :scm_verbose, true
 set :use_sudo, false
+set :shared_children, shared_children + %w{public/uploads}
 
 set :stages, %(staging production)
 set :default_stage, "staging"
@@ -37,7 +38,12 @@ namespace :deploy do
   task :reset_db do
     run "cd #{current_path}; rake db:reset RAILS_ENV=#{rails_env}"
   end
+
+  task :symlink_uploads do
+     run "ln -nfs #{shared_path}/uploads  #{release_path}/public/uploads"
+   end
 end
 
 after "deploy", "deploy:cleanup"
 after "deploy:migrations", "deploy:cleanup"
+after 'deploy:update_code', 'deploy:symlink_uploads'

@@ -37,14 +37,25 @@ html lang="zh_TW"
     hr
     footer.footer
       .container
-        p
-          | © 2012
-          a href="http://www.babyworld.tw"  babysworld.tw
-          |  All Rights Reserved.
-        p
-          = link_to "使用條款", "/terms"
-          '
-          ' |
-          '
-          = link_to "託售須知", "/user_consignment"
+        .span12
+          p
+            | © 2012
+            a href="http://www.babyworld.tw"  babysworld.tw
+            |  All Rights Reserved.
+          p
+            = link_to "使用條款", "/terms"
+            '
+            ' |
+            '
+            = link_to "託售須知", "/user_consignment"
+        .span12
+          p
+            | 收貨地址: 台中市北屯區崇德三路45號
+          p
+            | mail:
+            a href="mailto:babysworld@hotmail.com.tw" babysworld@hotmail.com.tw
+          p
+            | 電話:0911-335700
+          p
+            | 電話服務時間 : 週一到週五早上10:00~睌上7:00 , 星期六.日休息
     = javascript_include_tag "application"

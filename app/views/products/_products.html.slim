@@ -30,7 +30,7 @@
             h4= link_to b.name, product_path(b)
             span.price $ #{b.price}
             - if b.status != 'replenish'
-              = link_to a.url, :target => "_blank", :class => 'btn' do
+              = link_to b.url, :target => "_blank", :class => 'btn' do
                 i.icon-shopping-cart
                 '
                 | 買下來
@@ -49,7 +49,7 @@
             h4= link_to c.name, product_path(c)
             span.price $ #{c.price}
             - if c.status != 'replenish'
-              = link_to a.url, :target => "_blank", :class => 'btn' do
+              = link_to c.url, :target => "_blank", :class => 'btn' do
                 i.icon-shopping-cart
                 '
                 | 買下來

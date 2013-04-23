@@ -3,8 +3,8 @@
  *= require_tree ./common
  */
 
-$baseFontSize: 14px;
-$baseLineHeight: 23.8px;
+$baseFontSize: 16px;
+$baseLineHeight: 27.2px;
 @import "bootstrap";
 @import "font-awesome/css/font-awesome.css";
 @import "compass/css3";
@@ -20,12 +20,11 @@ body {
     background-image: url(<%= asset_path("wood_pattern.png") %>);
     @include border-radius(5px, 5px);
     .container {
-      a.brand {
-        color: #AA140D;
-      }
       li {
         a {
-          color: #A97430;
+          color: #95672B;
+          font-weight: bold;
+          text-shadow: 0 1px 0 rgba(255,255,255,0.4);
           &:hover {
             color: #CF9847;
           }

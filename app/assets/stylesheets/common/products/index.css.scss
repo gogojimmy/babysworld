@@ -46,7 +46,10 @@ a.i-want-to-sell {
 }
 
 .well-block {
-  h2.hint { color: #51a351; }
+  h2.hint {
+    color: #51a351;
+    font-size: 34px;
+  }
   position: relative;
   background: white;
   display: block;
@@ -66,5 +69,10 @@ a.i-want-to-sell {
 }
 
 .process {
-  height: 383px;
+  height: 460px;
+}
+
+h2.center {
+  color: #51a351;
+  text-align: center;
 }

@@ -59,3 +59,4 @@ html lang="zh_TW"
           p
             | 電話服務時間 : 週一到週五早上10:00~睌上7:00 , 星期六.日休息
     = javascript_include_tag "application"
+    = render 'shared/analytics' if Rails.env.production?

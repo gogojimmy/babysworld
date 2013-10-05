@@ -69,8 +69,3 @@ Babysworld::Application.configure do
 end
 
 MAIN_URL = 'http://babysworld.tw'
-
-Babysworld::Application.config.middleware.use ExceptionNotifier,
-  :email_prefix => "[Exception Notifier - Production] ",
-  :sender_address => %{"notifier" <jimmy@babysworld.tw>},
-  :exception_recipients => %w{jimmy@gogojimmy.net}

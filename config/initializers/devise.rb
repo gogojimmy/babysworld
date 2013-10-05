@@ -232,4 +232,5 @@ Devise.setup do |config|
 
   OMNIAUTH_CONFIG = YAML.load(File.open("#{Rails.root}/config/omniauth.yml"))[Rails.env]
   config.omniauth :facebook, OMNIAUTH_CONFIG['facebook']['app_id'], OMNIAUTH_CONFIG['facebook']['secret_key']
+  config.secret_key = '9922c6e8a72f78a380ee7a6b700e36f5f74c116205a82fa94887a8f84f76a436e9e9ddc721b91be24b133156e660cef8ed90a79c35885e4757d1d3b01b0b718a
 end

@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(:version => 20130409170207) do
   create_table "consignment_products", :force => true do |t|
     t.string   "name"
     t.integer  "consignment_id"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
     t.string   "brand"
     t.string   "path"
     t.boolean  "warranty",              :default => false
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(:version => 20130409170207) do
     t.string   "how_new"
     t.text     "short_coming"
     t.text     "comment"
-    t.string   "dealing_status",        :default => "等待處理"
+    t.string   "dealing_status"
     t.string   "attachment"
     t.string   "attachment_tmp"
     t.boolean  "attachment_processing"

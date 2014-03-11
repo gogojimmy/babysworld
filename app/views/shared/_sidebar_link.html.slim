@@ -1,13 +1,7 @@
 #faqs data-spy="affix"
   ul.faqs
-    li.bg_white= link_to '託售前確認', '#confirm'
-    li.bg_white= link_to '商品售價', '#price'
-    li.bg_white= link_to '託售商品交易平台', '#platform'
-    li.bg_white= link_to '託售期限', '#range'
-    li.bg_white= link_to '終止託售', '#suspend'
-    li.bg_white= link_to '託售商品查詢', '#query'
-    li.bg_white= link_to '取款方式', '#withdraw'
-    li.bg_white= link_to '託售所得計算說明', '#calculate'
-    li.bg_white= link_to '拒收商品', '#deny'
-    li.bg_white= link_to '託售流程', '#process'
+    li.bg_white= link_to '託售規則', '/user_consignment'
+    li.bg_white= link_to '託售所得計算', 'user_consignment#calculate'
+    li.bg_white= link_to '拒收商品', 'user_consignment#deny'
+    li.bg_white= link_to '託售流程', 'user_consignment#process'
     li.bg_white= link_to '常見問題Q&A', '/faq'
